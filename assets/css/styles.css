@@ -182,3 +182,72 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--primary); outli
 .product-line h3{margin:0;color:#0b2e69;font-size:clamp(19px,2vw,26px);font-weight:700;line-height:1.25}
 .product-line p{margin:0;color:#4c6078;font-size:16px;line-height:1.55}
 @media(max-width:700px){.product-line{grid-template-columns:1fr;gap:8px;padding:20px 0}.product-line p{font-size:14px}}
+
+/* XTRAE editorial 2026 — solo secciones bajo hero */
+:root{--shadow:none;--bg-soft:#f7f7f5;--border:#dedfdd}
+.section:not(.hero){padding:clamp(60px,7vw,108px) 0}
+.section:not(.hero) .eyebrow{background:none;border:0;padding:0;border-radius:0;color:#69717b;font-size:11px;letter-spacing:.13em;margin-bottom:24px}
+.section:not(.hero) h2{font-size:clamp(32px,4vw,58px);font-weight:700;line-height:1.08;letter-spacing:-.045em;color:#151b22}
+.section:not(.hero) h3{color:#151b22}
+.section:not(.hero) p{color:#59616b}
+.section-title{margin-bottom:38px}
+.section-title p{max-width:520px}
+.editorial-kicker{display:block;color:#737981;font-size:11px;letter-spacing:.14em;font-weight:700;margin-bottom:24px}
+.product-lines{background:#fff;border-bottom:1px solid #dedfdd}
+.editorial-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,8vw,140px)}
+.editorial-intro h2{max-width:650px}
+.intro-aside{padding-top:48px}
+.intro-aside>p{font-size:17px;line-height:1.7;margin-bottom:38px}
+.intro-details{border-top:1px solid #d9dcdf}
+.intro-details>div{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;border-bottom:1px solid #d9dcdf;padding:18px 0}
+.intro-details strong{font-size:14px;color:#1b2530}
+.intro-details span{font-size:13px;color:#68717a}
+.catalog-preview{background:#fff;border:0}
+.editorial-products{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px!important;border:0!important}
+.editorial-products .product-card{grid-column:span 4;min-width:0;min-height:0;border:0!important;padding:0!important;background:#fff!important;box-shadow:none!important;display:flex;flex-direction:column}
+.editorial-products .product-card:nth-child(1),.editorial-products .product-card:nth-child(4){grid-column:span 6}
+.editorial-products .product-card:nth-child(2),.editorial-products .product-card:nth-child(3){grid-column:span 3}
+.editorial-products .product-card:nth-child(5),.editorial-products .product-card:nth-child(6){grid-column:span 3}
+.editorial-products .product-image-wrap{aspect-ratio:1.28;background:#f0f1ef!important;border:0!important;border-radius:9px!important;margin-bottom:16px}
+.editorial-products .product-card:nth-child(1) .product-image-wrap,.editorial-products .product-card:nth-child(4) .product-image-wrap{aspect-ratio:1.62}
+.editorial-products .product-image-wrap img{padding:clamp(15px,3vw,35px);transition:transform .3s ease}
+.editorial-products .product-card:hover img{transform:scale(1.035)}
+.editorial-products .product-tag{font-size:10px!important;margin-bottom:7px}
+.editorial-products .product-card h3{font-size:19px!important;margin-bottom:6px}
+.editorial-products .product-card p{font-size:13px;margin-bottom:12px}
+.editorial-products .quote-badge{padding:0 0 3px;background:transparent;border:0;border-bottom:1px solid #1b2530;color:#1b2530;border-radius:0!important;font-size:13px;font-weight:700}
+.catalog-section{background:#f4f4f1!important;border:0}
+.catalog-grid{gap:clamp(45px,8vw,125px)}
+.catalog-image{max-width:500px!important;filter:none!important}
+.catalog-content p{max-width:480px;line-height:1.75}
+.catalog-content .button-row{margin-top:32px}
+.section:not(.hero) .btn{box-shadow:none;border-radius:6px;transform:none}
+.section:not(.hero) .btn-primary{background:#111b29}
+.section:not(.hero) .btn-secondary{background:transparent;color:#152337;border:1px solid #b9bec3}
+.section:not(.hero) .btn-outline{background:#fff;border-color:#b9bec3;color:#182535}
+.advisory-section{background:#fff!important;border:0}
+.advisory-grid{grid-template-columns:.9fr 1.1fr;gap:clamp(40px,9vw,150px)}
+.advisory-panel{padding:0!important;border:0!important;background:none!important}
+.advisory-panel p{line-height:1.75;max-width:440px}
+.advisory-list{gap:0;border-top:1px solid #d5d9db}
+.advisory-item{padding:26px 0!important;border:0!important;border-bottom:1px solid #d5d9db!important;background:none!important}
+.advisory-item span{color:#7a8187;font-size:10px;letter-spacing:.12em;margin-bottom:10px}
+.advisory-item h3{font-size:21px;margin-bottom:8px}
+.advisory-item p{font-size:14px;line-height:1.6}
+.faq-section{background:#f7f7f5!important;border:0}
+.faq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,8vw,130px)}
+.faq-layout>div>p{margin-top:20px}
+.faq-list{border-top:1px solid #d3d6d7}
+.faq-list details{border-bottom:1px solid #d3d6d7;padding:21px 0}
+.faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-size:16px;font-weight:700;color:#20262c}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';font-size:22px;font-weight:400}
+.faq-list details[open] summary::after{content:'−'}
+.faq-list details p{font-size:14px;max-width:540px;line-height:1.7;padding:16px 25px 0 0}
+.cta-section{background:#fff!important}
+.cta-box{padding:42px 0!important;background:none!important;border:0!important;border-top:1px solid #d5d9db!important;border-bottom:1px solid #d5d9db!important;border-radius:0!important;grid-template-columns:1fr auto;gap:36px}
+.cta-box p{max-width:580px;line-height:1.7}
+.cta-actions{display:block}
+.cta-actions .btn{white-space:nowrap}
+@media(max-width:850px){.editorial-intro,.advisory-grid,.faq-layout{grid-template-columns:1fr;gap:26px}.intro-aside{padding-top:0}.editorial-products .product-card,.editorial-products .product-card:nth-child(n){grid-column:span 6}.editorial-products .product-image-wrap,.editorial-products .product-card:nth-child(n) .product-image-wrap{aspect-ratio:1.15}.cta-box{grid-template-columns:1fr}}
+@media(max-width:520px){.editorial-products{gap:22px 12px!important}.editorial-products .product-card:nth-child(n){grid-column:span 6}.editorial-products .product-card h3{font-size:15px!important}.editorial-products .product-card p{display:none}.editorial-products .product-image-wrap{margin-bottom:10px}.editorial-products .quote-badge{font-size:12px}.intro-details>div{grid-template-columns:1fr;gap:4px}.catalog-grid{gap:22px}.cta-box{padding:28px 0!important}}
