@@ -290,3 +290,6 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--primary); outli
 .editorial-products .quote-badge{align-self:flex-start;margin-top:auto!important}
 @media(max-width:850px){.editorial-products{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:520px){.editorial-products{grid-template-columns:1fr!important;gap:34px!important}.editorial-products .product-card h3{min-height:0}.editorial-products .product-image-wrap{margin-bottom:14px!important}}
+
+/* Mobile: dos productos por fila */
+@media(max-width:520px){.editorial-products{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px 12px!important}.editorial-products .product-card h3{font-size:15px!important}.editorial-products .product-card p{font-size:12px!important;line-height:1.45}.editorial-products .product-image-wrap,.editorial-products .product-card:nth-child(n) .product-image-wrap{aspect-ratio:1/1!important}}
