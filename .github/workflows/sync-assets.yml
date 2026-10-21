@@ -1,0 +1,69 @@
+name: Sincronizar recursos XTRAE desde hosting
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-assets.yml"
+permissions:
+  contents: write
+jobs:
+  download-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Obtener imágenes y catálogo PDF de xtrae.cl
+        shell: bash
+        run: |
+          set -uo pipefail
+          paths=(
+            assets/img/fav-xtrae.png
+            assets/img/catalogo-xtrae.png
+            assets/img/cat-xtrae.png
+            assets/img/xtrae-logo-inv.png
+            assets/img/hero-mineria.jpg
+            assets/img/xtrae-logo.png
+            assets/img/icon-whatsapp.png
+            assets/img/productos/lampara-minera-cable.png
+            assets/img/productos/perforadora-yt27.png
+            assets/img/productos/martillo-geologico.png
+            assets/img/productos/broca-rotomartillo.png
+            assets/img/productos/barra-conica.png
+            assets/img/productos/batea-plastica-oro.png
+            assets/pdf/catalogo-xtrae.pdf
+          )
+          success=0
+          for path in "${paths[@]}"; do
+            if [[ -s "$path" ]]; then
+              echo "Ya existe: $path"
+              continue
+            fi
+            mkdir -p "$(dirname "$path")"
+            url="https://xtrae.cl/$path"
+            echo "Descargando: $url"
+            if curl --fail --location --retry 2 --connect-timeout 12 --max-time 180 --silent --show-error -A "Mozilla/5.0 (compatible; XTRAE-site-migration)" "$url" -o "$path.tmp"; then
+              mime="$(file -b --mime-type "$path.tmp")"
+              if [[ "$path" == *.pdf && "$mime" == application/pdf || "$path" == *.png && "$mime" == image/png || "$path" == *.jpg && "$mime" == image/jpeg ]]; then
+                mv "$path.tmp" "$path"
+                success=$((success + 1))
+                echo "OK $path"
+              else
+                echo "ERROR: respuesta no válida para $path: $mime"
+                rm -f "$path.tmp"
+              fi
+            else
+              echo "No se pudo descargar: $path"
+              rm -f "$path.tmp"
+            fi
+          done
+          echo "Archivos transferidos: $success"
+          [[ "$success" -gt 0 ]]
+      - name: Confirmar nuevos recursos en GitHub
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/img assets/pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "Importar imágenes y catálogo desde el hosting XTRAE"
+            git push
+          fi
