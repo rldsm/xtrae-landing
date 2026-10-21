@@ -251,3 +251,29 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--primary); outli
 .cta-actions .btn{white-space:nowrap}
 @media(max-width:850px){.editorial-intro,.advisory-grid,.faq-layout{grid-template-columns:1fr;gap:26px}.intro-aside{padding-top:0}.editorial-products .product-card,.editorial-products .product-card:nth-child(n){grid-column:span 6}.editorial-products .product-image-wrap,.editorial-products .product-card:nth-child(n) .product-image-wrap{aspect-ratio:1.15}.cta-box{grid-template-columns:1fr}}
 @media(max-width:520px){.editorial-products{gap:22px 12px!important}.editorial-products .product-card:nth-child(n){grid-column:span 6}.editorial-products .product-card h3{font-size:15px!important}.editorial-products .product-card p{display:none}.editorial-products .product-image-wrap{margin-bottom:10px}.editorial-products .quote-badge{font-size:12px}.intro-details>div{grid-template-columns:1fr;gap:4px}.catalog-grid{gap:22px}.cta-box{padding:28px 0!important}}
+
+/* Hero editorial: conserva la fotografía original hero-mineria.jpg */
+.site-header{background:#fff;backdrop-filter:none;border-bottom:1px solid #e5e6e5}
+.nav{min-height:76px}
+.nav-actions{gap:8px}
+.nav-actions .btn{border-radius:5px;box-shadow:none;padding:10px 17px;font-size:13px;font-weight:700}
+.nav-actions .btn-outline{background:transparent;border-color:transparent;color:#20252b}
+.nav-actions .btn-outline:hover{background:#f1f2f0;color:#20252b}
+.nav-actions .btn-primary{background:#19232e}
+.hero{min-height:min(790px,calc(100svh - 76px));background-image:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 29%,rgba(255,255,255,.82) 45%,rgba(255,255,255,.12) 73%),url('/assets/img/hero-mineria.jpg');background-position:center,center;background-size:cover,cover;background-repeat:no-repeat}
+.hero::after{display:none}
+.hero-grid{padding:clamp(75px,9vw,140px) 0;min-height:inherit}
+.hero-content{max-width:650px}
+.hero .eyebrow{padding:0;border:0;border-radius:0;background:transparent;color:#4f5964;letter-spacing:.16em;font-size:11px;font-weight:700;margin-bottom:30px}
+.hero h1{font-size:clamp(44px,5.5vw,79px);line-height:1.04;letter-spacing:-.055em;color:#171f28;font-weight:700;max-width:680px;margin-bottom:27px}
+.hero p{font-size:clamp(15px,1.4vw,17px);line-height:1.72;max-width:500px;color:#4d5761;margin-bottom:31px}
+.hero-actions{gap:10px;margin-bottom:50px}
+.hero-actions .btn{width:auto;border-radius:5px;padding:14px 22px;font-size:13px;font-weight:700;box-shadow:none;transform:none}
+.hero-actions .btn-primary{background:#19232e}
+.hero-actions .btn-secondary{background:#fff;color:#19232e;border:1px solid #aeb5b9}
+.hero-info{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:540px}
+.hero .info-card{padding:14px 0 0;border:0;border-top:1px solid #9ca5ac;border-radius:0;background:transparent;box-shadow:none}
+.hero .info-card strong{font-size:13px;color:#202830;margin-bottom:5px}
+.hero .info-card span{font-size:12px;line-height:1.5;color:#4f5962}
+@media(max-width:900px){.hero{background-image:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 48%,rgba(255,255,255,.40) 100%),url('/assets/img/hero-mineria.jpg')}.hero-content{max-width:580px}}
+@media(max-width:600px){.nav{min-height:64px}.hero{min-height:auto;background-image:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.93) 55%,rgba(255,255,255,.63) 100%),url('/assets/img/hero-mineria.jpg');background-position:center,65% center}.hero-grid{padding:70px 0 65px}.hero h1{font-size:clamp(39px,10vw,55px)}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}.hero-actions .btn{width:auto;padding:13px 15px}.hero-info{gap:16px}.hero .info-card span{font-size:11px}}
