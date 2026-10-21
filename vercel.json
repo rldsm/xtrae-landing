@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/tienda",
+      "destination": "/catalogo/",
+      "permanent": true
+    },
+    {
+      "source": "/shop",
+      "destination": "/catalogo/",
+      "permanent": true
+    },
+    {
+      "source": "/productos",
+      "destination": "/catalogo/",
+      "permanent": true
+    },
+    {
+      "source": "/catalogo-2026",
+      "destination": "/catalogo/",
+      "permanent": true
+    }
+  ]
+}
