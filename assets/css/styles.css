@@ -146,3 +146,31 @@ img { max-width: 100%; display: block; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
 
 @media(prefers-reduced-motion: reduce){html{scroll-behavior:auto} .btn,.floating-whatsapp{transition:none}}
+/* XTRAE — dirección editorial industrial. Hero original preservado. */
+.category-section,.catalog-preview,.catalog-section,.advisory-section{background:#fff}
+.category-section .section-title,.catalog-preview .section-title{max-width:850px;margin-bottom:30px}
+.category-section h2,.catalog-preview h2,.catalog-section h2,.advisory-section h2{letter-spacing:-.025em}
+.industrial-categories{border-top:1px solid #cdd3db}
+.industrial-categories a{display:grid;grid-template-columns:52px minmax(190px,1fr) minmax(180px,1fr) 30px;align-items:center;gap:20px;padding:25px 8px;border-bottom:1px solid #cdd3db;color:#132b4f;text-decoration:none;background:transparent}
+.industrial-categories a:hover{background:#f4f6f8}
+.industrial-categories span{color:#7b8490;font-size:13px}
+.industrial-categories strong{font-size:21px;font-weight:700}
+.industrial-categories small{font-size:14px;color:#526071}
+.industrial-categories b{font-size:21px;font-weight:400}
+.product-grid{gap:0!important;border-top:1px solid #d9dfe5;border-left:1px solid #d9dfe5}
+.product-card{border:0!important;border-right:1px solid #d9dfe5!important;border-bottom:1px solid #d9dfe5!important;border-radius:0!important;box-shadow:none!important;padding:18px!important;background:#fff!important}
+.product-card:hover{box-shadow:none!important;background:#fafbfc!important}
+.product-image-wrap{border-radius:0!important;background:#f5f6f7!important;aspect-ratio:1/1}
+.product-image-wrap img{width:100%;height:100%;object-fit:contain}
+.product-card h3{font-size:17px!important;line-height:1.35}
+.product-card p{font-size:13px}
+.product-tag{border-radius:0!important;background:transparent!important;padding:0!important;color:#65717e!important;text-transform:uppercase;font-size:10px!important;letter-spacing:.09em}
+.quote-badge{border-radius:3px!important;box-shadow:none!important}
+.catalog-grid{align-items:center}
+.catalog-image-wrap{background:transparent!important;border:0!important;box-shadow:none!important}
+.catalog-image{object-fit:contain!important;filter:none!important}
+.catalog-content .button-row{margin-top:26px}
+.advisory-panel,.advisory-item{border-radius:0!important;box-shadow:none!important}
+.advisory-list{border-top:1px solid #d9dfe5}
+.advisory-item{border-bottom:1px solid #d9dfe5!important}
+@media(max-width:700px){.industrial-categories a{grid-template-columns:30px 1fr 24px;gap:10px}.industrial-categories small{grid-column:2;grid-row:2}.industrial-categories b{grid-column:3;grid-row:1}.industrial-categories strong{font-size:18px}}
