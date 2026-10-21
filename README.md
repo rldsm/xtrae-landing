@@ -1,5 +1,10 @@
 # XTRAE — sitio estático
 
-Landing XTRAE en HTML/CSS/JS, con catálogo, formularios por WhatsApp y seguimiento de GTM.
+Landing XTRAE en HTML, CSS y JavaScript, con catálogo online, contacto mediante WhatsApp y seguimiento de Google Tag Manager.
 
-Este repositorio se publicará en Vercel. El dominio xtrae.cl permanecerá con su DNS actual hasta una migración aprobada.
+## Publicación
+
+- Repositorio principal: `rldsm/xtrae-landing` (rama `main`).
+- Hosting de despliegue: Vercel.
+- La migración de DNS para `xtrae.cl` debe aprobarse por separado.
+- Archivos estáticos disponibles directamente desde la raíz y `assets/`.
