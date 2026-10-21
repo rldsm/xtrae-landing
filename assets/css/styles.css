@@ -277,3 +277,16 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--primary); outli
 .hero .info-card span{font-size:12px;line-height:1.5;color:#4f5962}
 @media(max-width:900px){.hero{background-image:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 48%,rgba(255,255,255,.40) 100%),url('/assets/img/hero-mineria.jpg')}.hero-content{max-width:580px}}
 @media(max-width:600px){.nav{min-height:64px}.hero{min-height:auto;background-image:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.93) 55%,rgba(255,255,255,.63) 100%),url('/assets/img/hero-mineria.jpg');background-position:center,65% center}.hero-grid{padding:70px 0 65px}.hero h1{font-size:clamp(39px,10vw,55px)}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}.hero-actions .btn{width:auto;padding:13px 15px}.hero-info{gap:16px}.hero .info-card span{font-size:11px}}
+
+
+/* Productos destacados: grilla uniforme, imágenes completas y CTA alineados */
+.editorial-products{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px 20px!important;align-items:stretch!important}
+.editorial-products .product-card,.editorial-products .product-card:nth-child(n){grid-column:auto!important;min-width:0!important;min-height:0!important;height:100%!important;display:flex!important;flex-direction:column!important;padding:0!important;border:0!important;background:#fff!important;box-shadow:none!important;overflow:visible!important}
+.editorial-products .product-image-wrap,.editorial-products .product-card:nth-child(n) .product-image-wrap{width:100%!important;height:auto!important;aspect-ratio:1/1!important;margin:0 0 16px!important;padding:0!important;background:#fff!important;border:1px solid #e7e8e8!important;border-radius:4px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+.editorial-products .product-image-wrap img,.editorial-products .product-card:nth-child(n) .product-image-wrap img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;padding:0!important;transform:none!important;transition:none!important}
+.editorial-products .product-card:hover img{transform:none!important}
+.editorial-products .product-card h3{min-height:2.7em}
+.editorial-products .product-card p{display:block!important;flex:1 0 auto;margin-bottom:16px!important}
+.editorial-products .quote-badge{align-self:flex-start;margin-top:auto!important}
+@media(max-width:850px){.editorial-products{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:520px){.editorial-products{grid-template-columns:1fr!important;gap:34px!important}.editorial-products .product-card h3{min-height:0}.editorial-products .product-image-wrap{margin-bottom:14px!important}}
